@@ -11,11 +11,11 @@ function App() {
 
   useEffect(() => {
     if (currentlyPlaying != null) {
-      fetch(`http://localhost:3000/geturl?name=${currentlyPlaying}`)
+      fetch(`https://frozen-hamlet-15741.herokuapp.com/geturl?name=${currentlyPlaying}`)
         .then((res) => res.json())
         .then((res) => {
           const player = document.getElementById('audio');
-          const url = `http://localhost:3000/stream?url=${res}`;
+          const url = `https://frozen-hamlet-15741.herokuapp.com/stream?url=${res}`;
           player.src = url;
           player.play();
         })
@@ -45,15 +45,13 @@ function App() {
             <audio
               style={{ width: '80%' }}
               id='audio'
-              src='http://localhost:3000/stream?url=fxrkhf17fU0'
+              src='https://frozen-hamlet-15741.herokuapp.com/stream?url=fxrkhf17fU0'
               autoPlay
               controls
             />
           </Grid>
         </Grid>
       </Box>
-      {/* <button onClick={() => loadUrlToAudio()}>load</button> */}
-      {/* <button onClick={() => fetcher()}>caller</button> */}
     </div>
   );
 }

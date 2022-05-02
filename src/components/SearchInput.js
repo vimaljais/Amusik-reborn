@@ -5,7 +5,7 @@ import React from 'react';
 
 function SearchInput({ setMusicList }) {
   const fetchMusicList = (quary) => {
-    fetch(`http://localhost:3000/search?q=${quary}`)
+    fetch(`https://frozen-hamlet-15741.herokuapp.com/search?q=${quary}`)
       .then((res) => res.json())
       .then((res) => {
         setMusicList(res.results);

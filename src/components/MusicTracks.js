@@ -27,14 +27,6 @@ export default function MusicTrack({ musicList, setCurrentlyPlaying }) {
           </ListItem>
         </ListItemButton>
       ))}
-      {/* <ListItem disablePadding>
-        <ListItemButton>
-          <ListItemIcon>
-            <Avatar src='https://picsum.photos/200/300' />
-          </ListItemIcon>
-          <ListItemText primary='Chelsea Otakan' />
-        </ListItemButton>
-      </ListItem> */}
     </List>
   );
 }
